@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Configuración de la animación para el modo diurno
+
 let dayModeTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".line-one",
@@ -11,7 +11,7 @@ let dayModeTl = gsap.timeline({
     }
 });
 
-// Animación de entrada
+
 dayModeTl.from('.line-one span', {
     y: '100vh',
     stagger: 0.4,
@@ -19,14 +19,14 @@ dayModeTl.from('.line-one span', {
     opacity: 0
 });
 
-// Animación de cambio de color de fondo
+
 dayModeTl.to('.line-one', {
     backgroundColor: 'yellow',
     duration: 1,
     ease: 'none'
 }, '+=0.5');
 
-// Animación de movimiento del sol
+
 dayModeTl.from('.sun', {
     x: '20vw',
     duration: 1,
@@ -51,7 +51,7 @@ dayModeTl.to('.line-one', {
     ease: 'none'
 }, '+=0.5');
 
-// Configuración de la animación para el modo or
+
 let orTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".line-two",
@@ -62,7 +62,7 @@ let orTl = gsap.timeline({
     }
 });
 
-// Asegúrate de que .line-two esté visible al inicio
+
 orTl.from('.line-two', {
     scale: 15,
     duration: 1,
@@ -83,7 +83,7 @@ orTl.to('.line-two span', {
     duration: 1,
 });
 
-// Configuración de la animación para el modo nocturno
+
 let nightModeTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".line-three",
@@ -94,7 +94,7 @@ let nightModeTl = gsap.timeline({
     }
 });
 
-// Animación de entrada
+
 nightModeTl.from('.line-three span', {
     y: '100vh',
     stagger: 0.4,
@@ -102,21 +102,21 @@ nightModeTl.from('.line-three span', {
     opacity: 0
 });
 
-// Animación de cambio del gradiente
+
 nightModeTl.to('.line-three', {
-    background: 'linear-gradient(to right, black 50%, black 50%)', // Cambia el gradiente a negro
+    background: 'linear-gradient(to right, black 50%, black 50%)', 
     duration: 1,
     ease: 'power1.out'
 }, '+=0.5');
 
-// Animación de cambio de color del texto
+
 nightModeTl.to('.line-three span', {
     color: 'white',
     duration: 1,
     ease: 'none'
 }, '+=0');
 
-// Animación de la luna
+
 nightModeTl.from('.moon', {
     x: '20vw',
     duration: 1,
